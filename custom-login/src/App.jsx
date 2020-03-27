@@ -21,6 +21,9 @@ import Messages from './Messages';
 import Navbar from './Navbar';
 import Profile from './Profile';
 
+import CustomLogin from './CustomLogin';
+
+
 
 const HasAccessToRouter = () => {
   const history = useHistory(); // example from react-router
@@ -39,7 +42,8 @@ const HasAccessToRouter = () => {
       <Container text style={{ marginTop: '7em' }}>
         <Route path="/" exact component={Home} />
         <Route path="/implicit/callback" component={LoginCallback} />
-        <Route path="/login" component={CustomLoginComponent} />
+        {/* <Route path="/login" component={CustomLoginComponent} /> */}
+        <Route path="/login" component={CustomLogin} />
         <SecureRoute path="/messages" component={Messages} />
         <SecureRoute path="/profile" component={Profile} />
       </Container>
